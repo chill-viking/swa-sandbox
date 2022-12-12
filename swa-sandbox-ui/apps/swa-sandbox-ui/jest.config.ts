@@ -10,6 +10,7 @@ export default {
     },
   },
   coverageDirectory: '../../coverage/apps/swa-sandbox-ui',
+  coverageReporters: ['lcov'],
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },
