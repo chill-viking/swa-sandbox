@@ -52,7 +52,7 @@ jobs:
             -Dsonar.organization=chill-viking-org
             -Dsonar.projectKey=chill-viking_swa-sandbox
             -Dsonar.javascript.lcov.reportPaths=coverage/**/lcov.info
-            -Dsonar.typescript.tsconfigPaths=tsconfig.app.json
+            -Dsonar.typescript.tsconfigPaths=**/tsconfig.app.json
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
