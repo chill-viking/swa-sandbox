@@ -1,4 +1,4 @@
-name: Test and Lint chill-viking-home
+name: Test and Lint swa-sandbox-ui
 on:
   push:
     branches:
