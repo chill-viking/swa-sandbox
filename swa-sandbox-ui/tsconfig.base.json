@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@swa-sandbox/basic-components": ["libs/basic-components/src/index.ts"]
+      "@swa-sandbox/basic-components": ["libs/basic-components/src/index.ts"],
+      "@swa-sandbox/basic-layout": ["libs/basic-layout/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
