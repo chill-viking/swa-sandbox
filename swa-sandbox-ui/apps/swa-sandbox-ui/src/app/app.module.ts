@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BasicLayoutComponent } from "@swa-sandbox/basic-layout";
+import { BasicLayoutComponent } from '@swa-sandbox/basic-layout';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
