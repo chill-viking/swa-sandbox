@@ -18,5 +18,7 @@
     "before 2am"
   ],
   "configMigration": true,
-  "dependencyDashboardTitle": "chore(deps): dependency dashboard"
+  "dependencyDashboardTitle": "chore(deps): dependency dashboard",
+  "platformAutomerge": true,
+  "automergeStrategy": "rebase"
 }
