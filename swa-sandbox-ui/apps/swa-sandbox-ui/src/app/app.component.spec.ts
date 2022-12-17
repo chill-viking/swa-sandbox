@@ -1,12 +1,21 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import {
+  BasicLayoutComponent,
+  LayoutBodyDirective,
+} from '@swa-sandbox/basic-layout';
+import { MockComponent, MockDirectives } from 'ng-mocks';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [AppComponent],
+      declarations: [
+        AppComponent,
+        MockComponent(BasicLayoutComponent),
+        MockDirectives(LayoutBodyDirective),
+      ],
     }).compileComponents();
   });
 
@@ -22,12 +31,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('swa-sandbox-ui');
   });
 
-  it('should render title', () => {
+  it('should use layout component', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain(
-      'App Component'
-    );
+    expect(compiled.querySelector('swa-sandbox-basic-layout')).toBeTruthy();
   });
 });

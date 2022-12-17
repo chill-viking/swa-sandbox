@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BasicLayoutComponent } from './basic-layout.component';
 
@@ -7,7 +8,8 @@ describe('BasicLayoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BasicLayoutComponent],
+      imports: [CommonModule],
+      declarations: [BasicLayoutComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(BasicLayoutComponent);
