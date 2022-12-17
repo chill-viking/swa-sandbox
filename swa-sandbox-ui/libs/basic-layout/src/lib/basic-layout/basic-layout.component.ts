@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, ContentChild, TemplateRef } from "@angular/core";
+import { LayoutBodyDirective } from "./directives/layout-body.directive";
 
 @Component({
   selector: 'swa-sandbox-basic-layout',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './basic-layout.component.html',
   styleUrls: ['./basic-layout.component.css'],
 })
-export class BasicLayoutComponent {}
+export class BasicLayoutComponent {
+  @ContentChild(LayoutBodyDirective, { read: TemplateRef<never> })
+  body?: TemplateRef<never>;
+}

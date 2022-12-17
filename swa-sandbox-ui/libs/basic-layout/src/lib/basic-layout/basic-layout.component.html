@@ -1,3 +1,11 @@
 <div class="cv-layout">
+  <ng-container
+    *ngTemplateOutlet="body || defaultBodyTemplate"
+  ></ng-container>
+  <p>Other content possibly:</p>
   <ng-content></ng-content>
 </div>
+
+<ng-template #defaultBodyTemplate>
+  <p>No body specified</p>
+</ng-template>
