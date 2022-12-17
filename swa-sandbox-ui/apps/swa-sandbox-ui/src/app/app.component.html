@@ -1,11 +1,17 @@
-<p>Outside layout</p>
-<swa-sandbox-basic-layout>
+<swa-sandbox-basic-layout [debug]="true">
   <ng-template swaSandboxLayoutBody>
-    <p>other ng-content</p>
     <h1>App Component</h1>
     <p>Inside layout</p>
     <div>
       <router-outlet></router-outlet>
+    </div>
+  </ng-template>
+  <ng-template swaSandboxLayoutFooter>
+    <div style="width: 50%; height: 100px">
+      <p>hello</p>
+    </div>
+    <div style="width: 50%; height: 50px">
+      <p>world</p>
     </div>
   </ng-template>
 </swa-sandbox-basic-layout>

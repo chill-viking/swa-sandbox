@@ -1,9 +1,16 @@
-<div class="cv-layout">
-  <ng-container
-    *ngTemplateOutlet="body || defaultBodyTemplate"
-  ></ng-container>
-  <p>Other content possibly:</p>
+<div class="cv-layout" [ngClass]="{ 'debug-border': debug }">
+  <div class="cv-body" [ngClass]="{ 'debug-border': debug }">
+    <ng-container
+      *ngTemplateOutlet="body || defaultBodyTemplate"
+    ></ng-container>
+  </div>
+
+  <!-- TODO: check if there's a way to check fr more content and hassle about it -->
   <ng-content></ng-content>
+
+  <div *ngIf="footer" class="cv-footer" [ngClass]="{ 'debug-border': debug }">
+    <ng-container *ngTemplateOutlet="footer"></ng-container>
+  </div>
 </div>
 
 <ng-template #defaultBodyTemplate>

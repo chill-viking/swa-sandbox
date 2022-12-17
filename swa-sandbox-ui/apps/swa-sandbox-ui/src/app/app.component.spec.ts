@@ -1,11 +1,8 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
-import {
-  BasicLayoutComponent,
-  LayoutBodyDirective,
-} from '@swa-sandbox/basic-layout';
-import { MockComponent, MockDirectives } from 'ng-mocks';
-import { AppComponent } from './app.component';
+import { TestBed } from "@angular/core/testing";
+import { RouterTestingModule } from "@angular/router/testing";
+import { BasicLayoutComponent, LayoutBodyDirective, LayoutFooterDirective } from "@swa-sandbox/basic-layout";
+import { MockComponent, MockDirectives } from "ng-mocks";
+import { AppComponent } from "./app.component";
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -14,7 +11,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         MockComponent(BasicLayoutComponent),
-        MockDirectives(LayoutBodyDirective),
+        MockDirectives(LayoutBodyDirective, LayoutFooterDirective),
       ],
     }).compileComponents();
   });
