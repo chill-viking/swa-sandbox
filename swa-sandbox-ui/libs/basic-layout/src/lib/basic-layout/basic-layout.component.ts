@@ -1,5 +1,6 @@
-import { Component, ContentChild, TemplateRef } from "@angular/core";
+import { Component, ContentChild, Input, TemplateRef } from "@angular/core";
 import { LayoutBodyDirective } from "./directives/layout-body.directive";
+import { LayoutFooterDirective } from "./directives/layout-footer.directive";
 
 @Component({
   selector: 'swa-sandbox-basic-layout',
@@ -9,4 +10,8 @@ import { LayoutBodyDirective } from "./directives/layout-body.directive";
 export class BasicLayoutComponent {
   @ContentChild(LayoutBodyDirective, { read: TemplateRef<never> })
   body?: TemplateRef<never>;
+  @ContentChild(LayoutFooterDirective, { read: TemplateRef<never> })
+  footer?: TemplateRef<never>;
+
+  @Input() debug = false;
 }
